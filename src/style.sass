@@ -1,0 +1,434 @@
+//color Define 
+$color_black: #181A19
+$color_black2: #383639
+$color_skin: #EADDDB 
+$color_grey: #F4F4F4    
+
+//FontChanged 
+
+*
+  font-family: 'EB Garamond', '微軟正黑體'
+  position: relative
+html, body
+  margin: 0px
+  padding: 0px 
+
+.preloader 
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  //background-color: black 
+  position: fixed 
+  transition: 1s
+  z-index: 4
+  
+  &:before 
+    content: ""
+    display: block 
+    position: absolute 
+    width: 50%
+    height: 100%
+    transition: 0.5s
+    left: 0
+    background-color: $color_black
+    transition:  1s
+    cursor: pointer
+  .loader
+    position: absolute 
+    left: 50%
+    top: 50%
+    transform: translate(-50%,-50%)
+    border: solid 3px white 
+    width: 80px
+    height: 50px
+    animation: Ro 2s linear infinite 
+    transition: 0.5s 
+    border-radius: 5px
+    background-color: #DEE2EC
+    z-index: 1
+
+    &:before
+      content: ''
+      display: block 
+      top: -10px 
+      right: 10px
+
+      background-color: white 
+      width: 20px
+      height: 10px 
+
+      position: absolute 
+    &:after
+      content: ''
+      display: block 
+      top: 50%
+      left: 50% 
+      border-radius: 100px
+      transform: translate(-50%,-50%)
+      background-color: white 
+      width: 20px
+      height: 20px 
+      border: solid 2px black
+
+      position: absolute 
+
+    
+
+    @keyframes Ro 
+      0%
+        transform: translate(-50%,-50%) rotate(0deg)
+      25%
+        transform: translate(-50%,-50%) rotate(180deg)
+      50%
+        transform: translate(-50%,-50%) rotate(180deg)
+      75%
+        transform: translate(-50%,-50%) rotate(360deg)
+      100%
+        transform: translate(-50%,-50%) rotate(360deg)
+
+
+      
+
+  &:after 
+    content: ""
+    display: block 
+    position: absolute 
+    width: 50%
+    height: 100%
+    transition: 0.5s
+    right: 0
+    background-color: $color_black
+    transition:  1s
+.re
+    &:before
+      left: -50%
+    &:after
+      right: -50%
+
+nav.navbar.navbar-expand-md.mb-4.fixed-top
+  a.navbar-brand.ml-2
+    color: #FFDFD8
+    transition: 0.5s
+    
+    &:hover
+      opacity: 0.5
+    
+ul.navbar-nav.ml-auto.mr-3
+  li.nav-item
+    .ins
+      width: 25px
+      margin: 5px
+      &:hover
+        cursor: pointer
+    a.nav-link
+      color: #FFDFD8
+      transition: 0.5s
+      &:hover
+        opacity: 0.5
+section
+  padding: 20px 0px
+  position: relative
+//Foumulate 
+@mixin size($width, $height)
+  width: $width
+  height: $height 
+@mixin center($d)
+  position: absolute 
+  left: 50%
+  top: 50%
+  transform: translate(-50%, -50%)
+
+html, body
+  height: 1000px
+  
+.NavMove
+  background-color: rgba(128,128,128,0.5)
+  transition: 0.5s
+
+
+  
+
+  
+#headerfirst
+  
+  &:before 
+    content: ""
+    background-color: black 
+    opacity: 0.3
+    width: 100%
+    height: 100%
+    position: absolute 
+  &:after 
+    content: ""
+    background-image: url("https://i.imgur.com/POZWxTx.jpg")
+    background-size: cover 
+    background-attachment: fixed 
+    background-position: center 
+    opacity: 0.8
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    position: absolute
+    z-index: -1  
+  
+  .container 
+    padding: 250px 0px
+    color: white 
+    .explore
+      opacity: 0
+      z-index: 4
+    .ex 
+      opacity: 1
+      position: absolute
+      left: 50%
+      bottom: 5%
+      cursor: pointer
+      color: #F8F1FF
+      transition: 0.3s
+      &:hover 
+        color: $color_skin
+      &:after 
+        content: "∇"
+        display: block 
+        text-align: center 
+        animation: downward 0.5s infinite 
+        cursor: pointer
+      @keyframes downward 
+        0%
+          transform: translateX(0%)
+        100%
+          transform: translateY(10px)
+          
+      
+      
+    .text_area
+      padding-left: 40px
+      
+      .head
+        font-size: 70px
+        @media screen and (max-width: 700px)
+          font-size: 70px
+          text-align: center 
+      .text 
+        font-size: 30px
+        @media screen and (max-width: 700px)
+          font-size: 40px
+          text-align: center 
+       
+        
+#sectionIntro
+    background-color: #383639
+    color: white 
+    .col-sm-8
+       
+    .personalpic
+        width: 100%
+        height: 100%
+        padding-top: 20px
+        margin-right: 80px
+        @media screen and (max-width: 700px)
+          width: 100%
+          height: auto
+    
+    .col-sm-12
+        .about
+          padding: 10px 10px
+          font-weight: 300
+          
+    .col-sm-4
+          letter-spacing: 4px 
+          margin-top: 20px
+          @media screen and (max-width: 700px)
+            width: 100%
+            height: auto
+
+   
+#sectionSpan
+    background-color: #383639
+    .col-sm-12
+      carouselExampleIndicators.carousel.slide
+        padding: 100px 0px   
+       
+          
+section#AboutEurope
+  background-color: #383639
+  color: white 
+  .col-sm-12 
+   
+    h5
+      letter-spacing: 5px
+      
+section#SpanPortugal
+  background-color: #383639
+  
+  .col-sm-12
+    text-align: center 
+    color: $color_skin
+   
+    padding: 60px 0px
+  .col-sm-6
+    overflow: hidden
+  .span
+    width: 100%
+    height: 100%
+    
+  .check
+    transition: 0.5s
+    margin-top: 50px 
+    
+      
+    &:before
+        cursor: pointer
+        content: ""
+        display: block
+        background-color: $color_grey
+        width: 100%
+        height: 100%
+        z-index: 5
+        opacity: 0
+        +center(3)
+        transition: 0.5s
+        overflow: hidden
+    .text_part
+      +center(2)
+      color: white 
+      left: -100px
+      opacity: 0
+      cursor: pointer  
+      transition: 0.5s
+      h1
+        font-size: 70px
+    &:hover 
+      &:before
+        opacity: 0.3 
+      .text_part
+        opacity: 1
+        +center(2)
+        
+
+#productphoto
+  padding: 70px 0px
+  background-color: #383639
+  color: white 
+ 
+  .row
+    .col-sm-12
+      text-align: center 
+      color: $color_skin
+      margin-bottom: 50px
+      padding: 10px 20px
+    .col-sm-4
+        cursor: pointer
+        transition: 0.5s 
+        margin: 20px 0px 
+        cursor: pointer
+        z-index: 10
+        &:hover
+          .productname
+            opacity: 1
+            font-weight: 800
+          img
+            transform: translateX(-10px)
+        img
+          width: 100%
+          height: 100%
+          transition: 0.5s
+        
+        .productname
+          text-align: center 
+          +center(2)
+          font-size: 20px 
+          opacity: 0
+          transition: 0.5s
+          color: white 
+          
+         
+      
+         
+        
+     
+        
+      
+  .pro1
+    
+    img
+      width: 100%
+      height: 100%    
+      
+      
+      
+
+section#PortraitPhotograph   
+      background-color: #383639
+      color: white 
+      .row
+        margin-top: 100px
+        @media screen and (max-width: 700px)
+ 
+      .col-sm-12
+        h1 
+          text-align: center
+          color: $color_skin
+          padding: 60px
+      .col-sm-6
+          margin: 15px
+
+        .btn.btn-outline-primary.float-right
+          transform: translateX(-30px)
+          z-index: 15
+          @media screen and(max-width: 700px)
+            transform: translateX(-80px)
+        .btn.btn-outline-primary.float-left.btn-lg.Eson
+          
+          z-index: 15
+          @media screen and(max-width: 700px)
+            transform: translateX(-80px)
+        .text_head 
+          font-size: 80px
+          padding-bottom: 20px 
+          text-align: center 
+          @media screen and (max-width: 700px)
+            font-size: 40px
+            padding: 20px
+        .Tara 
+          &:before
+            content: " "
+            display: block
+            background-image: url("https://i.imgur.com/AKUwiAK.png")
+            background-size: 70%
+            background-repeat: no-repeat 
+            background-position: center center 
+            max-width: 500px
+            height: 500px
+            
+     
+        .eson
+          &:before
+            content: " "
+            display: block
+            background-image: url("https://i.imgur.com/FkkTcbL.jpg")
+            background-size: 60%
+            background-repeat: no-repeat 
+            background-position: center center 
+            max-width: 500px
+            height: 500px
+            @media screen and (max-width: 700px)
+              margin-top: 20px
+          
+section#End
+    
+  
+    background-color: #EADDDB
+    background-size: cover 
+    background-attachment: fixed
+    .container 
+      padding: 10px 
+      text-align: center
+      color: darken(black,10) 
+      .col-sm-12
+        padding: 15px
+        
+
+          
